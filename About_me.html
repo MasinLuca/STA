@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* questo tag modifica tutto il body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+ /* questo tag modifica le classi con questo nome */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;  /* questo aggiunge 3D */
+}
+/* questo è per il movimento della flip card */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 px 20px 0 rgba(0,0,0,0.2);
+}
+ 
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+/* questo è relativo ad entrambe le facce della flip card e dice la posizione e le altezze*/
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+/* questo è relativo alla parte frontale della flip card */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+/* questo è relativo al retro della flip card */
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+</style>
+</head>
+<body>
+ 
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="./Luca Masin.jpg" alt="Error not find..." style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>Luca Masin</h1>
+      <p>13/06/2006</p>
+      <p>Studente</p>
+      <p>Ex giocatore di basket</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
