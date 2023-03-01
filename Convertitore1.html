@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            color: orange;
+            background-color: rgb(255, 239, 8);
+        }
+    </style>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"&gt>
+     <script>src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"</script>
+     <script>src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"</script>
+     <script>src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"</script>
+ 
+ 
+     <title>Calcolatore Valute</title>
+ 
+     
+ </head>
+ <body>
+     <div id="Sfondo">
+     <div class="container">
+         <h2>Calcolatore valute</h2>
+         <p>Inserisci un euro in input e in output avrai il valore della valuta scelta</p>
+      
+           <div class="form-group">
+             <label for="dato1">Eur (€)</label>
+             <input type="text" class="form-control" id="dato1" name="dato1">
+           </div>
+          
+           <button type="submit" onclick="calcolaValutaUSD();" class="btn btn-primary">Calcola USD</button>
+           <div id="output">
+            
+           
+ 
+           </div>
+       </div>
+     </div>
+     <script>
+          function calcolaValutaUSD() {
+             let Eur=0;
+             let USD=0;
+             let AUD=0;
+             let BRL=0;
+             let CAD=0;
+             let CHF=0;
+             let CNY=0;
+             let DKK=0;
+             let GBP=0;
+             let USDtot=0;
+             Eur=document.getElementById("dato1").value*1;
+  
+             USD=document.getElementById("dato1").value*1.07;
+ 
+             USDtot=Eur*(Eur/USD);
+ 
+             alert("il valore è di: "+USDtot);
+             }
+     </script>
+
+ </body>
+ </html>
