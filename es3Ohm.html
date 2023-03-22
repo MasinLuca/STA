@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calcolatore con legge di OHM</title>
+        <style>
+            div {
+                padding: 10px;
+                width: 400px;
+                height: 400px;
+                background-color: rgba(255, 197, 61, 0.904);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calcolatore di resistenza e di energia dissipata</h1>
+        <div>
+            <p>Differenza di potenziale: 4,5 △V</p>
+            <p>Corrente elettrica: 0,10 A</p>
+            <button onclick="calcolatoreResistenza()">Calcola Resistenza</button>
+            <p>Resistenza =<p id="output"></p>
+            <p>Intervallo di tempo: 1h</p>
+            <button onclick="calcolatoreEnergiaD()">Calcola Energia dissipata in un'ora</button>
+            <p>Energia dissipata =<p id="output2"></p>
+            <script>
+                function calcolatoreResistenza() {
+                    let V=4.5;
+                    let I=0.1
+                    let R=V/I
+                    document.getElementById("output").innerHTML=R
+                }
+                function calcolatoreEnergiaD() {
+                    let IT=3600
+                    let R=4.5/0.1
+                    let I=0.1*0.1
+                    let ED=R*I*IT
+                    document.getElementById("output2").innerHTML=ED
+                }
+            </script>
+        </div>
+    </body>
+</html>
