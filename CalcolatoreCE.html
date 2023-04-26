@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        
+        h1{
+            padding: 5px;
+            margin-left: 20px;
+            border: 1px transparent;
+            width: 525px;
+            background-color: rgb(236, 200, 200);
+        }
+        div{
+            margin-left: 2cm;
+            padding-top: 1cm;
+            text-align: center;
+            border: 3px solid black;
+            height: 300px;
+            width: 300px;
+            background-color: rgb(236, 242, 218);
+        }
+        button{
+            background-color: rgb(182, 243, 165);
+            width: 150px;
+            height: 30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolatore di Corrente Elettrica</title>
+   
+</head>
+<body>
+    <h1>Calcolatore di Corrente Elettrica (CE)</h1>
+    <div>
+        <p>Resistenza (R):</p>
+        <input type="text" id="resistenza">
+        <p>Differenza di potenziale (△V): 5V</p>
+        <br>
+        <button onclick="calcCE()">Calcola della CE</button>
+        <p>Corrente Elettrica (CE):<p id="CE"></p>
+        <script>
+            function calcCE() {
+                let resistenza=document.getElementById("resistenza").value
+                let diffpot=5
+                let CE=resistenza/diffpot
+                document.getElementById("CE").innerHTML=CE
+            }
+        </script>
+    </div>
+</body>
+</html>
