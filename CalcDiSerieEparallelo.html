@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .Serie {
+            background-color: rgb(182, 226, 226);
+            border: 3px solid black;
+            width: 500px;
+            height: 500px;
+            padding: 5px;          
+        }
+        .Parallelo {
+            background-color: rgb(232, 213, 235);
+            position: relative;
+            left: 550px;
+            bottom: 556px;
+            border: 3px solid rgb(0, 0, 0);
+            width: 500px;
+            height: 500px;
+            padding: 5px;          
+        }
+        button {
+         background-color: #4CAF50; 
+         border: none;
+         color: white;
+         padding: 16px 32px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         font-size: 16px;
+         margin: 4px 2px;
+         transition-duration: 0.4s;
+         cursor: pointer;
+        }
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>Calcolatore di serie</h2>
+        <p>Inserire intensità di corrente e resistenza elettrica</p>
+     
+          <div class="Serie">
+            <p>SERIE</p>
+            <label for="dato1">V</label>
+            <input type="text" class="form-control" id="dato1" name="dato1">
+            <label for="dato2">Resistenza 1</label>
+            <input type="text" class="form-control" id="dato2" name="dato2">
+           <label for="dato3">Resistenza 2</label>
+           <input type="text" class="form-control" id="dato3" name="dato3">
+           <label for="dato3">Resistenza 3</label>
+           <input type="text" class="form-control" id="dato4" name="dato4">
+           <label for="dato3">Resistenza totale</label>
+           <input type="text" class="form-control" id="dato5" name="dato5">
+          
+        </div>
+        
+        <button  onclick="calcolaSerie()" class="btn-primary">Calcola</button>
+          <div id="output1">
+
+          <div id="Parallelo" class="Parallelo"></div>
+          <p>PARALLELO</p>
+            <label for="dato4">V</label>
+            <input type="text" class="form-control" id="dato6" name="dato6">
+            <label for="dato5">Resistenza 1</label>
+            <input type="text" class="form-control" id="dato7" name="dato7">
+           <label for="dato6">Resistenza 2</label>
+           <input type="text" class="form-control" id="dato8" name="dato8">
+           <label for="dato7">Resistenza 3</label>
+           <input type="text" class="form-control" id="dato9" name="dato9">
+           <label for="dato7">Resistenza totale</label>
+           <input type="text" class="form-control" id="dato10" name="dato10">
+          
+        </div>
+         
+          <button onclick="calcolaParallelo()" class="btn-secondary">Calcola</button>
+          <div id="output">
+
+
+          </div>
+      </div>
+
+
+
+    <script>
+         function calcolaSerie() {
+
+         let V=0;
+         let res1=0;
+         let res2=0;
+         let res3=0;
+         let rtot=0;
+            
+            V=document.getElementById("dato1").value;
+ 
+            res1=parseFloat(document.getElementById("dato2").value);
+
+            res2=parseFloat(document.getElementById("dato3").value);
+            
+            res3=parseFloat(document.getElementById("dato4").value);
+
+            rtot=parseFloat(document.getElementById("dato5").value);
+
+            rtot= (res1+res2+res3);
+            alert("Risultato R tot: "+rtot+"")
+            diff= (V * rtot);
+            alert("[SERIE]Risultato △V: "+diff+"")
+
+            
+
+         }
+
+    </script>
+    <script>
+      function calcolaParallelo() {
+
+         let V=0;
+         let res1=0;
+         let res2=0;
+         let res3=0;
+         let rtot=0;
+         
+         V=document.getElementById("dato1").value;
+
+         res1=parseFloat(document.getElementById("dato6").value);
+
+         res2=parseFloat(document.getElementById("dato7").value);
+         
+         res3=parseFloat(document.getElementById("dato4").value);
+
+         rtot=parseFloat(document.getElementById("dato5").value);
+
+         diff= (int * res)
+
+        
+
+      }
+
+ </script>
+</body>
+</html>
