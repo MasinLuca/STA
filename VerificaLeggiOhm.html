@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        div{
+            background-color: rgb(167, 187, 225);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    
+
+
+</head>
+<body>
+    <div class="container">
+        <h2>Verifica leggi di Ohm</h2>
+        <p>Inserire intensità di corrente e resistenza elettrica</p>
+     
+          <div class="form-group">
+            <label for="dato1">Intensità</label>
+            <input type="text" class="form-control" id="dato1" name="dato1">
+
+            <label for="dato2">Resistenza</label>
+            <input type="text" class="form-control" id="dato2" name="dato2">
+           
+          </div>
+         
+          <button type="submit" onclick="calcolaCorrente()" class="btn btn-primary">Calcola</button>
+          <div id="output">
+          </div>
+          
+          <br>
+
+          <p>Inserire resistenza elettrica e differenza di potenziale</p>
+          <div>
+          
+          <label for="dato3">Resistenza</label>
+          <input type="text" class="form-control" id="dato3" name="dato3">
+
+          <label for="dato4">Differenza di potenziale</label>
+          <input type="text" class="form-control" id="dato4" name="dato4">
+
+          </div>
+          <button type="submit" onclick="calcolaIntensità()" id="button2">Calcola</button>
+          <div id="output2">
+          </div>
+      <br>
+
+      <p>Inserire intensità di corrente e differenza di potenziale</p>
+      <div>
+      <label for="dato5">Differenza di potenziale</label>
+      <input type="text" class="form-control" id="dato5" name="dato5">
+
+      <label for="dato6">Intensità di corrente</label>
+      <input type="text" class="form-control" id="dato6" name="dato6">
+
+      </div>
+      <button type="submit" onclick="calcolaIntensità()" id="button3">Calcola</button>
+      <div id="output2">
+      </div>
+  </div>
+</div>
+
+    
+
+
+
+    <script>
+         function calcolaCorrente() {
+
+            let int=0;
+            let res=0;
+            int=document.getElementById("dato1").value;
+ 
+            res=document.getElementById("dato2").value;
+
+            diff= (int * res)
+
+            alert("La diffenrenza di potenziale (ΔV) è di: "+diff,"");
+
+         }
+
+    </script>
+    <script>
+        function calcolaIntensità() {
+            let res=0;
+            let diff=0;
+            
+            res=document.getElementById("dato3").value;
+            diff=document.getElementById("dato4").value;
+
+            Int= (res * diff)
+
+            alert("L'intensità di corrente è di: "+Int,"");
+        }
+    </script>
+<script>
+    function calcolaResistenza() {
+        let Int=0;
+        let diff=0;
+        
+        Int=document.getElementById("dato6").value;
+        diff=document.getElementById("dato5").value;
+
+        Res= (diff/Int)
+
+        alert("La resistenza elettrica è di: "+Res+"");
+    }
+</script>
+</body>
+</html>
